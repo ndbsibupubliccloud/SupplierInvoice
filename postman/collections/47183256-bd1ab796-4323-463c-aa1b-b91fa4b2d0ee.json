@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "47183256-bd1ab796-4323-463c-aa1b-b91fa4b2d0ee",
+		"name": "Supplier Invoice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SupplierInvoice Get",
+			"id": "47183256-e0fcf2f4-e6f4-4af7-9d33-2d3ee8c6c8d7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "fetch",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata/sap/API_SUPPLIERINVOICE_PROCESS_SRV/A_SupplierInvoice(SupplierInvoice='5105600104',FiscalYear='2024')/to_SelectedPurchaseOrders",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_SUPPLIERINVOICE_PROCESS_SRV",
+						"A_SupplierInvoice(SupplierInvoice='5105600104',FiscalYear='2024')",
+						"to_SelectedPurchaseOrders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SupplierInvoice post",
+			"id": "47183256-cc218178-b218-415d-9845-76213fa93b33",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "fupi8xlLsuRZRmYwBKtUqaorELcnYa<EvKncVidV",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "CPI_COM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "9PcIAWRSPMW79teQZ4v_IA==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CompanyCode\": \"1000\",\r\n    \"DocumentDate\": \"2025-03-11T00:00:00\",\r\n    \"PostingDate\": \"2025-03-11T00:00:00\",\r\n    \"DocumentCurrency\": \"INR\",\r\n    \"PaymentTerms\": \"0001\",\r\n    \"TaxDeterminationDate\": \"2025-03-11T00:00:00\",\r\n    \"SupplierInvoiceStatus\": \"A\",\r\n    \"to_SuplrInvcItemPurOrdRef\": {\r\n        \"results\": [\r\n            {\r\n                \"SupplierInvoiceItem\": \"01\",\r\n                \"PurchaseOrder\": \"4500000091\",\r\n                \"PurchaseOrderItem\": \"10\",\r\n                \"TaxCode\": \"P1\",\r\n                \"SupplierInvoiceItemAmount\": \"100\",\r\n                \"DocumentCurrency\": \"INR\",\r\n                \"ReferenceDocument\": \"5000000101\",\r\n                \"ReferenceDocumentFiscalYear\": \"2025\",\r\n                \"ReferenceDocumentItem\": \"1\",\r\n                \"QuantityInPurchaseOrderUnit\": \"5\",\r\n                \"PurchaseOrderQuantityUnit\": \"PC\"\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://my419475-api.s4hana.cloud.sap/sap/opu/odata/sap/API_SUPPLIERINVOICE_PROCESS_SRV/A_SupplierInvoice",
+					"protocol": "https",
+					"host": [
+						"my419475-api",
+						"s4hana",
+						"cloud",
+						"sap"
+					],
+					"path": [
+						"sap",
+						"opu",
+						"odata",
+						"sap",
+						"API_SUPPLIERINVOICE_PROCESS_SRV",
+						"A_SupplierInvoice"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
